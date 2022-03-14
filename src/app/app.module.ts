@@ -8,6 +8,10 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { ContactComponent } from './contact/contact.component';
+import { ClothesDesignSelectionComponent } from './clothes-design-selection/clothes-design-selection.component';
+import { ConfirmOrderComponent } from './confirm-order/confirm-order.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     RegistrationComponent,
     LoginComponent,
     AboutComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    ContactComponent,
+    ClothesDesignSelectionComponent,
+    ConfirmOrderComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
