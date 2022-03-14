@@ -12,6 +12,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ClothesDesignSelectionComponent } from './clothes-design-selection/clothes-design-selection.component';
 import { ConfirmOrderComponent } from './confirm-order/confirm-order.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LadiesWearComponent } from './clothes-design-selection/ladies-wear/ladies-wear.component';
+import { MensWearComponent } from './clothes-design-selection/mens-wear/mens-wear.component';
+import { BabiesWearComponent } from './clothes-design-selection/babies-wear/babies-wear.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     ContactComponent,
     ClothesDesignSelectionComponent,
     ConfirmOrderComponent,
-    NavbarComponent
+    NavbarComponent,
+    LadiesWearComponent,
+    MensWearComponent,
+    BabiesWearComponent
   ],
   imports: [
     BrowserModule,
