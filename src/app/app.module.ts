@@ -6,6 +6,10 @@ import { MatSliderModule } from '@angular/material/slider';
 import{AngularFireModule}from '@angular/fire/compat';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
+
+import { getFirestore } from "firebase/firestore";
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -67,7 +71,10 @@ import { FirebseService } from './services/firebase.service';
       messagingSenderId: "114015800258",
       appId: "1:114015800258:web:915abf7ec7d5b7380d245b"
     }),
-    MatDatepickerModule
+    MatDatepickerModule,
+    
+  
+    
     
   ],
   providers: [FirebseService],
