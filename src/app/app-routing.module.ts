@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'kids',component:BabiesWearComponent},
   {path:'women',component:LadiesWearComponent},
   {path:'mens',component:MensWearComponent},
-  {path:'confrim',component:ConfirmOrderComponent},
+  {path:'confirm',component:ConfirmOrderComponent},
   {path:'contact',component:ContactComponent},
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
