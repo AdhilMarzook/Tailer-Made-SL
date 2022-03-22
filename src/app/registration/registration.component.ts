@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebseService } from '../services/firebase.service';
+import { doc, setDoc } from "firebase/firestore"; 
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -40,3 +42,17 @@ export class RegistrationComponent  {
 
 
 }
+
+
+
+// Add a new document in collection "cities"
+await setDoc(doc(db, "cities", "LA"), {
+  firstName: "",
+  lastName: "",
+  birthdayDate: "",
+  femaleGender: "",
+  maleGender: "",
+  phoneNumber: "",
+  address: "",
+  confirmpassword: ""
+});
