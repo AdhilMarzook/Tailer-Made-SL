@@ -15,7 +15,7 @@
                 <div class="col-md-6 mb-1">
 
                   <div class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" />
+                    <input type="text" id="firstName" [(ngModel)]="fname" class="form-control form-control-lg" />
                     <label class="form-label" for="firstName">First Name</label>
                   </div>
 
@@ -23,7 +23,7 @@
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="lastName" class="form-control form-control-lg" />
+                    <input type="text" id="lastName" [(ngModel)]="lname" class="form-control form-control-lg" />
                     <label class="form-label" for="lastName">Last Name</label>
                   </div>
 
@@ -122,14 +122,16 @@
               
 
               <div class="mt-1 pt-1">
-                <button (click)="onSignup(emailSignup.value,passwordSignup.value)"  class="btn btn-primary btn-lg">Sign up</button>
+                <button (click)="onSignup(emailSignup.value,passwordSignup.value)"(click)="createuser()"  class="btn btn-primary btn-lg">Sign up</button>
               </div> 
               
               
               <p class="text-muted mt-2 mb-0">Have already an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
 
               <p class="text-center mt-5 mb-3 text-muted">&copy; Tailor Made SL</p>
-
+<div>
+  
+</div>
             </form>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { OrdersComponent } from './orders/orders.component';
 import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
-  {path:'clothes',component:ClothesDesignSelectionComponent}
+  {path:'clothes',component:ClothesDesignSelectionComponent},
+  {path:'test',component:OrdersComponent}
 
 
   
