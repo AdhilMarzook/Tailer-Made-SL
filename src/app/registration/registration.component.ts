@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebseService } from '../services/firebase.service';
-import { doc, setDoc } from "firebase/firestore"; 
+import{CrudService}from '../services/crud.service'
+
 
 @Component({
   selector: 'app-registration',
@@ -8,9 +9,16 @@ import { doc, setDoc } from "firebase/firestore";
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent  {
+  // var fname= document.getElementById("firstName")
+  // var fname= document.getElementById("firstName")
+ 
+  fname: string="";
+  lname: string ="";
+  message:string="";
+  
   title = 'Tailor Made SL'
   isSignedIn = false
-  constructor(public firebaseService : FirebseService ){}
+  constructor(public firebaseService : FirebseService ,private CrudService:CrudService ){}
  
   ngOnit(){
     if(localStorage.getItem('user')!== null)
@@ -39,20 +47,30 @@ export class RegistrationComponent  {
 
 
   }
+  createuser(){
+    let Record:any ={};
+    Record.firstname= this.fname;
+    Record.lastname=this.lname;
+    
+
+this.CrudService.create_newuser(Record).then(res =>{
+ 
+  this.fname="";
+  this.lname ="";
+
+  console.log(res);
+ this.message="data save done";
+}).catch(error =>{
+  console.log(error);
+});
+
+
+  }
+
 
 
 }
 
 
 
-// Add a new document in collection "cities"
-await setDoc(doc(db, "cities", "LA"), {
-  firstName: "",
-  lastName: "",
-  birthdayDate: "",
-  femaleGender: "",
-  maleGender: "",
-  phoneNumber: "",
-  address: "",
-  confirmpassword: ""
-});
+
