@@ -1,14 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebseService } from '../services/firebase.service';
+import{CrudService}from '../services/crud.service'
+
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent  {
+  // var fname= document.getElementById("firstName")
+  // var fname= document.getElementById("firstName")
+ 
+  fname: string="";
+  lname: string ="";
+  message:string="";
+  
   title = 'Tailor Made SL'
   isSignedIn = false
-  constructor(public firebaseService : FirebseService ){}
+  constructor(public firebaseService : FirebseService ,private CrudService:CrudService ){}
  
   ngOnit(){
     if(localStorage.getItem('user')!== null)
@@ -37,6 +47,26 @@ export class RegistrationComponent  {
 
 
   }
+  createuser(){
+    let Record:any ={};
+    Record.firstname= this.fname;
+    Record.lastname=this.lname;
+    
+
+this.CrudService.create_newuser(Record).then(res =>{
+ 
+  this.fname="";
+  this.lname ="";
+
+  console.log(res);
+ this.message="data save done";
+}).catch(error =>{
+  console.log(error);
+});
+
+
+  }
+
 
 
 }
