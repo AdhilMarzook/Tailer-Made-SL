@@ -2,9 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { MatSliderModule } from '@angular/material/slider';
-
+import{FormsModule}from '@angular/forms';
 import{AngularFireModule}from '@angular/fire/compat';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+// import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { ReactiveFormsModule } from "@angular/forms";
+
+
+import{CrudService }from './services/crud.service'
+
+
+
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +36,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { FirebseService } from './services/firebase.service';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderListComponent } from './order-list/order-list.component';
+import { AdminAddComponent } from './admin-add/admin-add.component';
+import { AdminUserOrderComponent } from './admin-user-order/admin-user-order.component';
+// import { OrdersService } from "./shared/orders.service";
+
+
 
 @NgModule({
   declarations: [
@@ -41,7 +59,11 @@ import { FirebseService } from './services/firebase.service';
     NavbarComponent,
     LadiesWearComponent,
     MensWearComponent,
-    BabiesWearComponent
+    BabiesWearComponent,
+    OrdersComponent,
+    OrderListComponent,
+    AdminAddComponent,
+    AdminUserOrderComponent
     
   ],
   imports: [
@@ -52,6 +74,7 @@ import { FirebseService } from './services/firebase.service';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatButtonModule,
+    
     
     MatRippleModule,
     
@@ -67,10 +90,13 @@ import { FirebseService } from './services/firebase.service';
       messagingSenderId: "114015800258",
       appId: "1:114015800258:web:915abf7ec7d5b7380d245b"
     }),
-    MatDatepickerModule
+    MatDatepickerModule,
+    provideFirestore(() => getFirestore()),
+    ReactiveFormsModule,
+    FormsModule
     
   ],
-  providers: [FirebseService],
+  providers: [FirebseService,CrudService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
