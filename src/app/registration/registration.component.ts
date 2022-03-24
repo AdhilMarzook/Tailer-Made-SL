@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebseService } from '../services/firebase.service';
 import{CrudService}from '../services/crud.service'
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -12,13 +13,21 @@ export class RegistrationComponent  {
   // var fname= document.getElementById("firstName")
   // var fname= document.getElementById("firstName")
  
-  fname: string="";
-  lname: string ="";
   message:string="";
+
+  registerForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    dob:new FormControl(''),
+    email:new FormControl(''),
+    phone:new FormControl(''),
+    address:new FormControl(''),
+    cpassword:new FormControl('')
+  });
   
   title = 'Tailor Made SL'
   isSignedIn = false
-  constructor(public firebaseService : FirebseService ,private CrudService:CrudService ){}
+  constructor(public firebaseService : FirebseService ,private CrudService:CrudService,private fb: FormBuilder ){}
  
   ngOnit(){
     if(localStorage.getItem('user')!== null)
@@ -33,6 +42,7 @@ export class RegistrationComponent  {
     
 
   }
+
   async onSignin(email:string,password:string){
    
     await this.firebaseService.signin(email,password)
@@ -42,21 +52,23 @@ export class RegistrationComponent  {
     
     
   }
+
   handleLogout(){
     this.isSignedIn= false
 
 
   }
+
+  
   createuser(){
     let Record:any ={};
-    Record.firstname= this.fname;
-    Record.lastname=this.lname;
+
+    Record = this.registerForm.value;
     
 
 this.CrudService.create_newuser(Record).then(res =>{
  
-  this.fname="";
-  this.lname ="";
+  
 
   console.log(res);
  this.message="data save done";
