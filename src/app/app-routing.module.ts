@@ -1,7 +1,9 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AdminAddComponent } from './admin-add/admin-add.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AdminUserOrderComponent } from './admin-user-order/admin-user-order.component';
 import { BabiesWearComponent } from './clothes-design-selection/babies-wear/babies-wear.component';
 import { ClothesDesignSelectionComponent } from './clothes-design-selection/clothes-design-selection.component';
 import { LadiesWearComponent } from './clothes-design-selection/ladies-wear/ladies-wear.component';
@@ -13,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrdersComponent } from './orders/orders.component';
 import { RegistrationComponent } from './registration/registration.component';
+
 
 const routes: Routes = [
   {path:'nav',component:NavbarComponent},
@@ -27,7 +30,10 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
   {path:'clothes',component:ClothesDesignSelectionComponent},
-  {path:'test',component:OrdersComponent}
+  {path:'test',component:OrdersComponent},
+  {path:'adminadd',component:AdminAddComponent },
+  {path:'adminuser', component:AdminUserOrderComponent}
+
 
 
   
