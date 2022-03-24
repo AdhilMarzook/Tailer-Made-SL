@@ -38,6 +38,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { FirebseService } from './services/firebase.service';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderListComponent } from './order-list/order-list.component';
+import { AdminAddComponent } from './admin-add/admin-add.component';
+import { AdminUserOrderComponent } from './admin-user-order/admin-user-order.component';
 // import { OrdersService } from "./shared/orders.service";
 
 
@@ -59,7 +61,9 @@ import { OrderListComponent } from './order-list/order-list.component';
     MensWearComponent,
     BabiesWearComponent,
     OrdersComponent,
-    OrderListComponent
+    OrderListComponent,
+    AdminAddComponent,
+    AdminUserOrderComponent
     
   ],
   imports: [
