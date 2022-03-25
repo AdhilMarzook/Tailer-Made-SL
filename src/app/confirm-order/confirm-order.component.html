@@ -2,6 +2,7 @@
 <br>
 <div class="container">
 
+  <form [formGroup]="order">
     <div class="row">
         
           <div class="col-sm-6">
@@ -20,7 +21,7 @@
         <div class="col-sm-6">
       <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Material</label></div>
       <div class="col-sm-6">
-      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" formControlName="material".value>
           <option selected>Open this select menu</option>
           <option value="1">Cotton</option>
           <option value="2">Polyester</option>
@@ -33,16 +34,16 @@
       <div class="col-sm-6">
         <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Collar size</label></div>
         <div class="col-sm-6">
-        <input type="number" id="quantity" name="quantity" min="10" max="17" step="0.5"> In
+        <input type="number" id="quantity" formControlName="collarsize"name="quantity" min="10" max="17" step="0.5"> In
          </div>
       </div>
 
          <div class="row">
         
             <div class="col-sm-6">
-          <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Chest Size</label></div>
+          <label for="colFormLabelLg"  class="col-sm-2 col-form-label col-form-label-lg">Chest Size</label></div>
           <div class="col-sm-6">
-            <input type="number" id="quantity" name="quantity" min="35" max="55" step="0.1"> In
+            <input type="number" formControlName="chestsize" id="quantity" name="quantity" min="35" max="55" step="0.1"> In
              </div>
           
         </div>
@@ -52,7 +53,7 @@
             <div class="col-sm-6">
           <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"> length</label></div>
           <div class="col-sm-6">
-            <input type="number" id="quantity" name="quantity" min="20" max="30" step="0.1"> In
+            <input type="number" id="quantity" formControlName="length" name="quantity" min="20" max="30" step="0.1"> In
          </div>
           
         </div>
@@ -67,11 +68,12 @@
 
 
         <div class="d-grid gap-2">
-        <button class="btn btn-outline-danger" type="button">Confirm</button>
+        <button class="btn btn-outline-danger"  type="button">Confirm</button>
 
         </div>
-        
+  </form>    
     </div>
+    
     <!-- <mat-form-field appearance="fill">
       <mat-label>Choose a date</mat-label>
       <input matInput [matDatepicker]="picker">
