@@ -10,6 +10,10 @@ export class MensWearComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+
   }
+
+  
 
 }
