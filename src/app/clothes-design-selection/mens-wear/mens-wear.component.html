@@ -8,6 +8,7 @@
                         <h2>SHIRTS</h2>	
                       </div>
                 <div class="prod-container">
+                  <form [formGroup]="menaddop">
         <!------=======1st Shirt===========--->		
                 <div class="prod-box">
                 <img src="assets\Shirt\shirt1 (1).jpeg"  >
@@ -16,10 +17,11 @@
                 <p style="color: beige;font-weight: bold;">Price:LKR 2000</p>	
                 <p>25% OFF	</p>
                 <!-- <a href="confirm"><button type="button"></button></a> -->
-                <a href="newc"><input type="button" formControlName="Shirt01"  value="ORDER NOW"></a>
+                <input type="button" formControlName="Shirt01"(click)="menadd()" value="ORDER NOW">
                 </div>
                 </div>
                 </div>
+               </form>
         <!------=======2nd  Shirt===========--->		
                 <div class="prod-box">
                 <img src="assets\Shirt\shirt1 (1).jpg" >
@@ -27,7 +29,7 @@
                 <div class="prod-feature">
                 <p style="color: beige;font-weight: bold;">Price:LKR 2500</p>	
                 <p>25% OFF	</p>
-                <a href="newc"> <input type="button"   value="ORDER NOW"></a>
+                <a href="newc"> <input type="button" formControlName="Shirt02" (click)="menadd()"  value="ORDER NOW"></a>
                 </div>
                 </div>
                 </div>	
@@ -40,7 +42,7 @@
                 <div class="prod-feature">
                 <p style="color: beige;font-weight: bold;">Price:LKR 2100</p>	
                 <p>5% OFF	</p>
-                <input type="button" value="ORDER NOW">
+                <input type="button"formControlName="Shirt03" value="ORDER NOW">
                 </div>
                 </div>
                 </div>				
@@ -51,7 +53,7 @@
                 <div class="prod-feature">
                 <p style="color: beige;font-weight: bold;">Price:LKR 2300</p>	
                 <p>5% OFF	</p>
-                <input type="button" value="ORDER NOW">
+                <input type="button" formControlName="Shirt04" value="ORDER NOW">
                 </div>
                 </div>
                 </div>				
@@ -280,7 +282,8 @@
                 <input type="button" value="ORDER NOW">
                 </div>
                 </div>
-                </div>							
+                </div>
+                 							
             
                 <div class="item">
                     <div id="headingblock">
@@ -558,9 +561,12 @@
                 <input type="button" value="ORDER NOW">
                 </div>
                 </div>
-                </div>							
-            
-                
+               
+               
+               </div>							
+               
+               
+               </div>
                 
             </div>
          
