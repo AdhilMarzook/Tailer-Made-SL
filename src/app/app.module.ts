@@ -39,6 +39,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { AdminAddComponent } from './admin-add/admin-add.component';
 import { AdminUserOrderComponent } from './admin-user-order/admin-user-order.component';
+import { NewconfirmComponent } from './newconfirm/newconfirm.component';
 // import { OrdersService } from "./shared/orders.service";
 
 
@@ -62,7 +63,8 @@ import { AdminUserOrderComponent } from './admin-user-order/admin-user-order.com
     OrdersComponent,
     OrderListComponent,
     AdminAddComponent,
-    AdminUserOrderComponent
+    AdminUserOrderComponent,
+    NewconfirmComponent
     
   ],
   imports: [
