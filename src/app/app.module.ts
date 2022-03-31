@@ -9,7 +9,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from "@angular/forms";
 
-
 import{CrudService }from './services/crud.service'
 
 
@@ -40,6 +39,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { AdminAddComponent } from './admin-add/admin-add.component';
 import { AdminUserOrderComponent } from './admin-user-order/admin-user-order.component';
+import { NewconfirmComponent } from './newconfirm/newconfirm.component';
 // import { OrdersService } from "./shared/orders.service";
 
 
@@ -63,7 +63,8 @@ import { AdminUserOrderComponent } from './admin-user-order/admin-user-order.com
     OrdersComponent,
     OrderListComponent,
     AdminAddComponent,
-    AdminUserOrderComponent
+    AdminUserOrderComponent,
+    NewconfirmComponent
     
   ],
   imports: [

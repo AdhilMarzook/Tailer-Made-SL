@@ -14,11 +14,17 @@ create_newuser(Record: any){
 
 }
 
-// create_order(orderRecord:any)
-// {
-//   console.log("orderRecord",orderRecord)
-// return this.fireservices.collection('order').add(orderRecord);
+create_order(orderRecord:any)
+{
+  console.log("orderRecord",orderRecord)
+return this.fireservices.collection('order').add(orderRecord);
 
-// }
+}
 
+create_men(menRecord:any)
+{
+  console.log("menRecord",menRecord)
+  return this.fireservices.collection('menclothes').add(menRecord);
+
+}
 }

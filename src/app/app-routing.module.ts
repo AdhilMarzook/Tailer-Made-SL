@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NewconfirmComponent } from './newconfirm/newconfirm.component';
 import { OrdersComponent } from './orders/orders.component';
 import { RegistrationComponent } from './registration/registration.component';
 
@@ -32,7 +33,8 @@ const routes: Routes = [
   {path:'clothes',component:ClothesDesignSelectionComponent},
   {path:'test',component:OrdersComponent},
   {path:'adminadd',component:AdminAddComponent },
-  {path:'adminuser', component:AdminUserOrderComponent}
+  {path:'adminuser', component:AdminUserOrderComponent},
+  {path:'newc',component:NewconfirmComponent}
 
 
 
