@@ -30,7 +30,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LadiesWearComponent } from './clothes-design-selection/ladies-wear/ladies-wear.component';
 import { MensWearComponent } from './clothes-design-selection/mens-wear/mens-wear.component';
 import { BabiesWearComponent } from './clothes-design-selection/babies-wear/babies-wear.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations;
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
